@@ -36,7 +36,7 @@ with tf.Graph().as_default():
         dropout = sess.graph.get_tensor_by_name(args_in_use.tensor_dropout)
         output = sess.graph.get_tensor_by_name(args_in_use.tensor_output)
         y_pred_cls = []
-        for x,y in batch_itr(contents, y_test_cls, 4):
+        for x,y in batch_itr(contents, y_test_cls, batch_size = 4):
             feed_dict = {
                 test_text : x,
                 dropout: 1.0

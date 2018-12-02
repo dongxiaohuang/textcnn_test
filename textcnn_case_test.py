@@ -39,7 +39,7 @@ with tf.Graph().as_default():
             if sentence =='q' or sentence == 'quit()':
                 break
             x_test = process_txt(sentence, word_to_id, args_in_use.seq_length)
-
+            print(x_test)
             feed_dict = {
                 test_text: x_test,
                 drop: 1.0
@@ -48,5 +48,5 @@ with tf.Graph().as_default():
             y_pred_cls = sess.run(output, feed_dict=feed_dict)
             print(y_pred_cls)
             y_pred_cls = y_pred_cls[0]
-            max_index = np.argmax(y_pred_cls[0], 1)
+            max_index = np.argmax(y_pred_cls)
             print(id_to_cat[max_index], y_pred_cls[max_index])

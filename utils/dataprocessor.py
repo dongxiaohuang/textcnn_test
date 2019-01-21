@@ -16,7 +16,7 @@ def data_preporcessor(input_str):
     return content
 
 def process_txt(input_str, word_to_id, seq_length):
-    input_str = data_preporcessor(input_str)
+    # input_str = data_preporcessor(input_str)
     unkIndex = word_to_id.get("<unk>", 1)
     data_id = []
     data_id.append([word_to_id.get(w, unkIndex) for w in input_str])

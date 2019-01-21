@@ -6,8 +6,8 @@ import os
 from sklearn import metrics
 from utils.dataprocessor import *
 #hyper parameters
-parser = argparse.ArgumentParser(description='Text CNN model case test program')
-parser.add_argument('--model', type=str, default='model/textcnn.pb', help='the path for the model')
+parser = argparse.ArgumentParser(description='Text CNN model batch test program')
+parser.add_argument('--model', type=str, default='model/2_fm_190121_model.pb', help='the path for the model')
 parser.add_argument('--dictionary', type=str, default='dict/textcnn.dict', help='the path for dictionary')
 parser.add_argument('--labels', type=str, default='labels/textcnn.labels', help='the path for labels')
 parser.add_argument('--seq_length', type=int, default=50, help='the length of sequence for text padding')
